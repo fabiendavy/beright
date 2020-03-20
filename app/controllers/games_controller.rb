@@ -16,4 +16,17 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
   end
+
+  def join
+  end
+
+  def redirect
+    token = params[:token]
+    @game = Game.find_by(token: token)
+    if @game
+      redirect_to game_path(@game)
+    else
+      render :join
+    end
+  end
 end

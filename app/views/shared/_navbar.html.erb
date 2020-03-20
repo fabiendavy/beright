@@ -11,11 +11,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Create Game", games_path, method: :post, class: "nav-link game-btn" %>
+        <li class="nav-item">
+          <%= link_to "Join Game", join_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%#= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "Create Game", games_path, method: :post, class: "nav-link game-btn" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSX8arMEw5fyDNRfhO9hVd5g4h6IahYV3m7NeMeHsWtY3eOqi-Y", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

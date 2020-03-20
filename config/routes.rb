@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   
   root to: 'pages#home'
   get "/dashboard", to: "pages#dashboard"
+  get "/join", to: "games#join"
+  post "", to: "games#redirect", as: :redirect
 
   resources :games, only: [:create, :show]
+
 end
