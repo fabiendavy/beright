@@ -12,7 +12,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%#= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Create Game", games_path, method: :post, class: "nav-link game-btn" %>
         </li>
         <li class="nav-item">
           <%#= link_to "Messages", "#", class: "nav-link" %>
